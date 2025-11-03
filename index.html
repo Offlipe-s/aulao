@@ -1,28 +1,138 @@
-<form id="registration-form" name="cadastro-aulao" method="POST" action="https://api.web3forms.com/submit">
-    
-    <input type="hidden" name="access_key" value="67f3f7b2-d-40b9-46f9-b1d8-57d8e2d4f394">
-    
-    <input type="hidden" name="redirect" value="https://offlipe-s.github.io/aulao/sucesso.html">
-    
-    <div class="form-group">
-        <label for="nome">Nome Completo:</label>
-        <input type="text" id="nome" name="Nome Completo" required placeholder="Seu nome">
-    </div>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição - Aulão Solidário ETE/Enem</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-    <div class="form-group">
-        <label for="tipoAulao">Escolha o Aulão:</label>
-        <select id="tipoAulao" name="Aulão Escolhido" required>
-            <option value="">Selecione uma opção</option>
-            <option value="ETE">Aulão ETE (Escola Técnica Estadual)</option>
-            <option value="ENEM">Aulão ENEM</option>
-        </select>
-    </div>
-    
-    <div class="form-group">
-        <label for="escola">Nome da Sua Escola:</label>
-        <input type="text" id="escola" name="Nome da Escola" required placeholder="Ex: ETE Ginásio Pernambucano">
-    </div>
+        /* Fundo com a imagem */
+        body {
+            background-image: url('imgaulaocad.jpg'); /* */
+            background-size: cover; 
+            background-position: center top; 
+            background-repeat: no-repeat; 
+            background-attachment: fixed; 
+            min-height: 100vh; 
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; 
+            padding: 20px 10px; 
+        }
 
-    <button type="submit">Confirmar Inscrição</button>
-    
-</form>
+        /* Container do Formulário */
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.95); 
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 450px; 
+            margin-top: 15vh; 
+        }
+        
+        /* Ajuste para telas menores (celular) */
+        @media (max-width: 600px) {
+            .form-container {
+                margin-top: 5vh; 
+                padding: 20px;
+            }
+            body {
+                background-position: center -50px; 
+            }
+        }
+
+        /* Título */
+        h1 {
+            color: #007bff; 
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        /* Estilo dos Grupos de Formulário */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        /* Estilo das Labels */
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Estilo dos Campos de Input e Select */
+        input[type="text"], 
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        /* Estilo do Botão de Envio */
+        button {
+            background-color: #28a745; 
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Inscrição - Aulão Solidário</h1>
+        
+        <form id="registration-form" name="cadastro-aulao" method="POST" action="https://api.web3forms.com/submit">
+            
+            <input type="hidden" name="access_key" value="67f3f7b2-d-40b9-46f9-b1d8-57d8e2d4f394">
+            
+            <input type="hidden" name="redirect" value="https://offlipe-s.github.io/aulao/sucesso.html">
+            
+            <div class="form-group">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="Nome Completo" required placeholder="Seu nome">
+            </div>
+
+            <div class="form-group">
+                <label for="tipoAulao">Escolha o Aulão:</label>
+                <select id="tipoAulao" name="Aulão Escolhido" required>
+                    <option value="">Selecione uma opção</option>
+                    <option value="ETE">Aulão ETE (Escola Técnica Estadual)</option>
+                    <option value="ENEM">Aulão ENEM</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="escola">Nome da Sua Escola:</label>
+                <input type="text" id="escola" name="Nome da Escola" required placeholder="Ex: ETE Ginásio Pernambucano">
+            </div>
+
+            <button type="submit">Confirmar Inscrição</button>
+            
+        </form>
+    </div>
+</body>
+</html>
